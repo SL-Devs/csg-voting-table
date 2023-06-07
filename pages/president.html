@@ -18,7 +18,7 @@
         crossorigin="anonymous"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
@@ -29,7 +29,6 @@
 </head>
 
 <body>
-
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
@@ -91,6 +90,7 @@
 
     </nav>
 
+
     <!-- Table -->
     <div class="container table-container mb-5 hidden">
         <!-- <h2>Morning In</h2> -->
@@ -100,6 +100,7 @@
             <input type="text" id="searchBar" onkeyup="tableSearch()" class="form-control"
                 placeholder="Search a student" aria-label="Student's username" aria-describedby="button-addon2">
 
+
             <!-- <button id="searchBtn" class="btn btn-outline-secondary" onkeyup="tableSearch()"
                 type="button">Search</button> -->
         </div>
@@ -107,12 +108,13 @@
         <div class="table-responsive hidden">
             <table id="tableStudents" class="table table-hover table-bordered caption-top table-sortable">
                 <caption>
-                    College Voters Attendance
+                    Presidential Candidates
                 </caption>
                 <thead class="thead-color">
                     <tr>
                         <th scope="col">No.</th>
                         <th scope="col">Full Name</th>
+                        <th scope="col">Votes</th>
                         <!-- <th scope="col">Department</th> -->
                         <!-- <th scope="col">Year</th>
                         <th scope="col">Time</th> -->
@@ -148,12 +150,12 @@
     <script type="module">
 
         import { db } from "/js/database.js"
-        import { addItemToTable_college, addAllItemsToTable_college } from "/js/tableUsersFunc.js"
+        import { addItemToTable_college, addAllItemsToTable_college } from "/js/tableFunctions.js"
         import { ref, child, onValue, get } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js";
 
         // Getting the data realtime
         function getAllDataRealtime_college() {
-            const dbRef = ref(db, 'Voted');
+            const dbRef = ref(db, 'President');
 
             onValue(dbRef, (snapshot) => {
                 let collegeUsers = [];
