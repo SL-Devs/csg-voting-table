@@ -7,14 +7,14 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyCuhKZnbFdVOrnrRNyOPLmJ8KsISrpIlic",
-    authDomain: "csg-attendance.firebaseapp.com",
-    databaseURL: "https://csg-attendance-default-rtdb.firebaseio.com",
-    projectId: "csg-attendance",
-    storageBucket: "csg-attendance.appspot.com",
-    messagingSenderId: "913037396545",
-    appId: "1:913037396545:web:44d0927ee7ea4ad3f7d4c0",
-    measurementId: "G-MD3YG277WR"
+    apiKey: "AIzaSyADg8A5WfGjBM-UgWpIJL4jM6PxRcRmzqQ",
+    authDomain: "csg-votingsystem.firebaseapp.com",
+    databaseURL: "https://csg-votingsystem-default-rtdb.firebaseio.com",
+    projectId: "csg-votingsystem",
+    storageBucket: "csg-votingsystem.appspot.com",
+    messagingSenderId: "811788305928",
+    appId: "1:811788305928:web:2951af01d59669867eb3bd",
+    measurementId: "G-SXWFGMN1FL"
 };
 
 // Initialize Firebase
