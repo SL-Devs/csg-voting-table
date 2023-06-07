@@ -2,21 +2,18 @@
 let user_college = 0;
 let tbody = document.getElementById('tbody1');
 
-function addItemToTable_college(fullname, course, year, time) {
+function addItemToTable_college(name, votes) {
     let trow = document.createElement('tr');
     let td1 = document.createElement('td');
     let td2 = document.createElement('td');
     let td3 = document.createElement('td');
-    let td4 = document.createElement('td');
-    let td5 = document.createElement('td');
+
 
     // assign elements to parameters (strings)
 
     td1.innerHTML = ++user_college;
-    td2.innerHTML = fullname;
-    td3.innerHTML = year;
-    td4.innerHTML = course;
-    td5.innerHTML = time;
+    td2.innerHTML = name;
+    td3.innerHTML = votes;
 
     // add trow on tbody
     tbody.appendChild(trow);
@@ -25,8 +22,7 @@ function addItemToTable_college(fullname, course, year, time) {
     trow.appendChild(td1);
     trow.appendChild(td2);
     trow.appendChild(td3);
-    trow.appendChild(td4);
-    trow.appendChild(td5);
+
 
 }
 
@@ -37,7 +33,7 @@ function addAllItemsToTable_college(users_college) {
     tbody.innerHTML = "";
 
     users_college.forEach(element => {
-        addItemToTable_college(element.fullname, element.year, element.course, element.time);
+        addItemToTable_college(element.name, element.votes);
     });
 
 }
