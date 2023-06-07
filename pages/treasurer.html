@@ -49,7 +49,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                             aria-expanded="false">College Voting Lists</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/index.html">Voters Attended</a></li>
+                            <li><a class="dropdown-item" href="/index.html">Voters Attendance</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -60,6 +60,7 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="/pages/secretary.html">Secretary</a></li>
+                            <li><a class="dropdown-item" href="/pages/teasurer.html">Treasurer</a></li>
                             <li><a class="dropdown-item" href="/pages/auditor.html">Auditor</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -108,7 +109,7 @@
         <div class="table-responsive hidden">
             <table id="tableStudents" class="table table-hover table-bordered caption-top table-sortable">
                 <caption>
-                    External PIO Candidates
+                    Treasurer Candidates
                 </caption>
                 <thead class="thead-color">
                     <tr>
@@ -155,7 +156,7 @@
 
         // Getting the data realtime
         function getAllDataRealtime_college() {
-            const dbRef = ref(db, 'External PIO');
+            const dbRef = ref(db, 'Treasurer');
 
             onValue(dbRef, (snapshot) => {
                 let collegeUsers = [];
